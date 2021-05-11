@@ -1,0 +1,78 @@
+.App {
+  text-align: center;
+}
+
+.main{
+  background-color:azure;
+  padding-bottom:5%;
+  padding-top:0.5%;
+}
+
+.bandeau{
+  background-color: #27252b;
+  padding-top:0.5%;
+  padding-bottom: 0.5%;
+}
+
+.button1{
+  display:inline-block;
+  padding:0.3em 1.2em;
+  margin:0 0.3em 0.3em 0;
+  /*border-radius:2em;*/
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Calibri',sans-serif;
+  font-weight:300;
+  color:#5da3ff;
+  background-color:#4eb5f100;
+  text-align:center;
+  transition: all 0.2s;
+  }
+
+.button1:hover{
+  background-color:#4095c6;
+}
+
+.button1:disabled{
+  background-color: #464749a6;
+  color:#466a99;
+}
+
+@media all and (max-width:30em){
+  .button1{
+    display:block;
+    margin:0.2em auto;
+  }
+}
+
+.connexion, .main, .bandeau{
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  max-width: 700px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: 'Calibri','Roboto', Arial, Helvetica, sans-serif;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.question{
+  color:rgb(39, 4, 4);
+  padding-top: 5px;
+}
+
+.App-link {
+  color: #61dafb;
+}
