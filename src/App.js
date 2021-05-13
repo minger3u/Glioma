@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import Accueil from './components/Accueil';
 import VosDonnees from './components/VosDonnees';
 import Contact from './components/Contact';
-import SignIn from './components/SignIn';
 import Navigation from './components/Navigation';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';

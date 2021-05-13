@@ -13,7 +13,7 @@ function Contact(props){
                 <a href="https://www.linkedin.com">Glioma Entreprise</a>
             </div>
             <div>
-                <a>06 63 00 14 82</a>
+                <p>06 63 00 14 82</p>
             </div>
             <h1>Prise de rendez-vous</h1>
         </div>

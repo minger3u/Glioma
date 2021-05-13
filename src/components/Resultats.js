@@ -1,10 +1,10 @@
 import React from 'react';
+import ExempleGraph from './images/ExempleGraph.jpg';
 
 function Resultat(props){
     return(
         <div>
-            <img className="graphique" src={'./images/ExempleGraph.png'} alt=""/>
-
+            <img src={ExempleGraph} alt=""/>
         </div>
     )
 }
