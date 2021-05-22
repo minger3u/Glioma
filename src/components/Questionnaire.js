@@ -9,9 +9,10 @@ function Questionnaire(props){
 
     return(
         <div>
+            <h1>Suivi par questionnaire</h1>
             <form onSubmit={onSubmit}>
                 <div className="question">
-                    <label htmlFor="q1">Combien de temps prenez-vous pour vous endormir?</label>
+                    <label htmlFor="q1">Question 1 - Combien de temps prenez-vous pour vous endormir?</label>
                         <div>
                             <input type="radio" id="r1" name="q1" value="r1"></input>
                             <label htmlFor="r1">Jamais plus de 30 minutes</label>

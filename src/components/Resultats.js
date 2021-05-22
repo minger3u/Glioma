@@ -1,37 +1,48 @@
-import { render } from '@testing-library/react';
 import React from 'react';
 import { Line } from 'react-chartjs-2';
+   
+class Resultats extends React.Component{
 
-    
-    //Visuel du graph
-    const options = {
-      scales: {
-        yAxes: [
-          {
-            ticks: {
-              beginAtZero: true,
-            },
-          },
-        ],
-      },
-    };
-
-    //Donnees du graph
-    const dataex = {
-      labels: ['1', '2', '3', '4', '5', '6'],
-      datasets: [
+  //Visuel du graph
+  options = {
+    scales: {
+      yAxes: [
         {
-          label: "Taux d'oxygenation",
-          data: [12, 19, 3, 5, 2, 3],
-          fill: false,
-          backgroundColor: 'rgb(255, 99, 132)',
-          borderColor: 'rgba(255, 99, 132, 0.2)',
+          ticks: {
+            beginAtZero: true,
+          },
         },
       ],
-    };
+    },
+  };
 
-class Resultats extends React.Component{
-    
+  //Données du graph
+  datapH = {
+    labels: ['1', '2', '3', '4', '5', '6'],
+    datasets: [
+      {
+        label: "Taux de pH",
+        data: [12, 19, 3, 5, 2, 3],
+        fill: false,
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgba(255, 99, 132, 0.2)',
+      },
+    ],
+  };
+  
+  dataox = {
+    labels: ['1', '2', '3', '4', '5', '6'],
+    datasets: [
+      {
+        label: "Taux d'oxygénation'",
+        data: [80, 70, 76, 71, 65, 55],
+        fill: false,
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgba(255, 99, 132, 0.2)',
+      },
+    ],
+  };
+
     constructor(props){
         super(props);
         this.state= {
@@ -49,13 +60,15 @@ class Resultats extends React.Component{
         console.log(this.props.data.oxygen_rates);
     }
 
-    //Dans le render, on voit qu'on peut afficher un taux d'oxygenation avec this.props.data.oxygen_rates[0].percent
     render(){
     return(
         <div>
-            <button onClick={this.showPerson}>click</button>
-            <div>{this.props.data !==null ? this.props.data.oxygen_rates[0].percent : null}</div>
-            <Line data={dataex} options={options} />
+            <h1>Résultats</h1>
+            <button onClick={this.showPerson}>Click</button>
+            <p>Taux pH (ne pas desendre en dessous de 6)</p>
+            <Line data={this.datapH} options={this.options} />
+            <p>Taux d'oxygénation (ne pas desendre en dessous de 50%)</p>
+            <Line data={this.dataox} options={this.options} />
         </div>
     );
     }

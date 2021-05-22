@@ -14,9 +14,9 @@ class VosDonnees extends React.Component{
 
     componentDidMount= async ()=>{
         const datajs = require('../utils/patients.json');
-        this.setState({data: datajs[1]});
+        this.setState({data: datajs[0]});
         //Obtention de l'age de l'utilisateur avec sa date de naissance
-        const birthDate = datajs[1].date_of_birth;
+        const birthDate = datajs[0].date_of_birth;
         const dob = new Date(birthDate);
         const monthDiff = Date.now() - dob.getTime();
         const age_dt = new Date(monthDiff);
@@ -47,10 +47,7 @@ class VosDonnees extends React.Component{
             <h1>Informations</h1>
             <div>{this.state.data !== null ? this.showDetails() : null}</div>
             <p>Date de l'opération: 22/03/2021</p>
-            <h1>Suivi</h1>
-            <p>Afin d'obtenir toutes les informations nécessaires merci de remplir chaque semaine le questionnaire suivant</p>
-            <button onClick={this.clickQuestionnaire} userid={this.props.userID}>{this.state.openQ ? 'Annuler' : 'Remplir le questionnaire'}</button>
-            {this.state.openQ ? <Questionnaire/> : ''}
+            
             <Resultat data={this.state.data}/>
         </div>
     )
