@@ -1,6 +1,6 @@
 # Application Glioma
 
-Membres du projet: Anaïs Lhotte - Camille Rémy - Denis Cossu - Nathan Minger
+Membres du projet: Anaïs Lhotte - Camille Remy - Denis Cossu - Nathan Minger
 
 ## Consignes de test
 
