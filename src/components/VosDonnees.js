@@ -1,5 +1,4 @@
 import React from 'react';
-import Questionnaire from './Questionnaire';
 import Resultat from './Resultats';
 
 class VosDonnees extends React.Component{
